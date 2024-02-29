@@ -1,0 +1,10 @@
+flask
+openai
+requests
+configparser
+langchain[all]
+gunicorn
+pinecone-client
+tiktoken
+uwsgi
+pandas
