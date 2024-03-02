@@ -15,8 +15,10 @@ if "messages" not in st.session_state:
 if "in_brief" not in st.session_state:
     st.session_state.in_brief = True
 
-url = 'https://dbapi-mtfui6kmqq-uc.a.run.app'
-#url = 'https://24c8-2402-7500-578-5705-c8a0-fb52-7516-59ed.ngrok-free.app'
+# url = 'https://dbapi-mtfui6kmqq-uc.a.run.app'
+url = 'https://dbapi-mtfui6kmqq-de.a.run.app'
+# url = 'https://24c8-2402-7500-578-5705-c8a0-fb52-7516-59ed.ngrok-free.app'
+
 # Read data
 detailed_history = requests.get(f'{url}/detailed_history').json()
 history = requests.get(f'{url}/history', params={'userId':'ALL'}).json()
@@ -55,9 +57,21 @@ if st.session_state['in_brief']:
 
     df = pd.DataFrame(data)
 
-    # 顯示線條圖
-    st.line_chart(df.set_index('Date'))
+    # # 將日期設定為索引
+    # df.set_index('Date', inplace=True)
 
+    # # 選擇月份
+    # selected_month = st.slider("Select month", 1, 12, 1)
+
+    # # 篩選數據
+    # df_current_month = df[df.index.month == selected_month]
+
+    # # 繪製圖表
+    # st.line_chart(df_current_month)
+
+    # chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+    # st.line_chart(chart_data)
 
 ############################################ Show personal statics ############################################
 else:
