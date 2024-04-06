@@ -16,7 +16,7 @@ if "in_brief" not in st.session_state:
     st.session_state.in_brief = True
 
 # url = 'https://dbapi-mtfui6kmqq-uc.a.run.app'
-url = 'https://dbapi-mtfui6kmqq-de.a.run.app'
+url = 'https://dbapi-3776hejzqq-uc.a.run.app'
 # url = 'https://24c8-2402-7500-578-5705-c8a0-fb52-7516-59ed.ngrok-free.app'
 
 # Read data
